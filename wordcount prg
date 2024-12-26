@@ -1,0 +1,23 @@
+def count_words(text):
+    """
+    Count the number of words in a given text.
+    :param text: str
+    :return: int
+    """
+    words = text.split()
+    return len(words)
+
+def main():
+    # Prompt user for input
+    user_input = input("Enter a sentence or paragraph: ").strip()
+
+    # Check for empty input
+    if not user_input:
+        print("Error: Input cannot be empty.")
+    else:
+        # Count words and display result
+        word_count = count_words(user_input)
+        print(f"The number of words in the text: {word_count}")
+
+if __name__ == "__main__":
+    main()
